@@ -3,17 +3,17 @@
 # Change Logs
 
 ## 2012-06-15
-Added MY_Log library which supports subdirectories and custom catalogs to overwrite CI's LOG.
-Added Theme system to support multiple themes. (sparks/assets was changed to support this)
-Added "bluesky" theme.
+> Added MY_Log library which supports subdirectories and custom catalogs to overwrite CI's LOG.
+> Added Theme system to support multiple themes. (sparks/assets was changed to support this)
+> Added "bluesky" theme.
 
 
 ## 2012-05-31
-Replace the orignal Session library with Hex's version.
+> Replace the orignal Session library with Hex's version.
 
 
 ## 2012-03-30
-Version 1.0 released - 20120330
+> Version 1.0 released - 20120330
 
 # The libraries and tools used in this release:
 
