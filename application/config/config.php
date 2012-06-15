@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 /*
- |--------------------------------------------------------------------------
+|--------------------------------------------------------------------------
 | Base Site URL
 |--------------------------------------------------------------------------
 |
@@ -180,7 +180,7 @@ $config['directory_trigger']	= 'd'; // experimental not currently in use
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+$config['log_threshold'] = 1;
 
 /*
  |--------------------------------------------------------------------------
@@ -203,6 +203,21 @@ $config['log_path'] = '';
 |
 */
 $config['log_date_format'] = 'Y-m-d H:i:s';
+
+/*
+|--------------------------------------------------------------------------
+| MY_Log configuration
+|--------------------------------------------------------------------------
+| Note: 1. Leaving this array blank will log ALL catalogs
+| 		 2. Without setting 'mylog_cats; will default to use standard
+| 		 log threshold config item
+| 		 3. The log file will be saved to different directories under
+| 		 log_path which will be named "pathname-catname-date('Y-m-d')-EXT"
+| 		 4.  mylog_sub_directories can works even "mylog_cats" is not set
+|		 5. Please make sure log_threshold is not set to 0
+*/
+$config['mylog_cats']= array('CAT1','CAT2','CAT3');
+$config['mylog_sub_directories']= true;
 
 /*
  |--------------------------------------------------------------------------
