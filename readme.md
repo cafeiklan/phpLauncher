@@ -3,12 +3,23 @@
 # Change Logs
 
 ## 2012-06-15
+
 > Added MY_Log library which supports subdirectories and custom catalogs to overwrite CI's LOG.
+
 > Added Theme system to support multiple themes. (sparks/assets was changed to support this)
+
 > Added "bluesky" theme.
 
+> Moved MY_Session to application/library folder.
+
+> Updated Codeigniter to 2.1.1(only replace the system folder)
+
+> Updated Twitter Bootstrap to V2.0.4
+
+> Moved the language files to application folder and change the config language to ZH-CN
 
 ## 2012-05-31
+
 > Replace the orignal Session library with Hex's version.
 
 
@@ -18,8 +29,11 @@
 # The libraries and tools used in this release:
 
 TankAuth & TwitterBootStrap:
+
 https://github.com/ThingOne/CI-Bootstrap
+
 http://twitter.github.com/bootstrap/
+
 
 Template:
 http://williamsconcepts.com/ci/codeigniter/libraries/template/index.html
@@ -63,9 +77,22 @@ https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc/wiki/Home
 # The following is good tools but not be used in this project till now:
 
 https://github.com/addyosmani/jquery-ui-bootstrap
+
 http://getsparks.org/packages/formgenlib/versions/HEAD/show
+
 http://getsparks.org/packages/debug_helper/versions/HEAD/show
 
 Auto:
 http://newfinds.com/code-igniter-sparks/auto-spark/
 
+# Known issues
+
+> Soma sparks can't work
+
+> assets has problem with compress js and css(image path issue)
+
+# Todos
+
+> The common files in theme should be placed to one place.
+
+> User manual

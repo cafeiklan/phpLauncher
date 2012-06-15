@@ -69,7 +69,8 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'english';
+//$config['language']	= 'english';
+$config['language']	= 'zh-CN';
 
 /*
  |--------------------------------------------------------------------------
@@ -404,7 +405,7 @@ $config['bootstrap_responsive'] = false;
 | Theme to set where to find css js etc.
 |--------------------------------------------------------------------------
 */
-$config['theme'] = "bluesky";
+$config['theme'] = "";
 
 /*
 |--------------------------------------------------------------------------

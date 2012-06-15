@@ -24,21 +24,21 @@
 		<?php echo form_open($this->uri->uri_string()); ?>
 		<table class="table loginform">
 			<tr>
-				<td><?php echo form_label('¾ÉÃÜÂë', $old_password['id']); ?></td>
+				<td><?php echo form_label('æ—§å¯†ç ', $old_password['id']); ?></td>
 				<td><?php echo form_password($old_password); ?></td>
 				<td style="color: red;"><?php echo form_error($old_password['name']); ?>
 					<?php echo isset($errors[$old_password['name']])?$errors[$old_password['name']]:'*'; ?>
 				</td>
 			</tr>
 			<tr>
-				<td><?php echo form_label('ÐÂÃÜÂë', $new_password['id']); ?></td>
+				<td><?php echo form_label('æ–°å¯†ç ', $new_password['id']); ?></td>
 				<td><?php echo form_password($new_password); ?></td>
 				<td style="color: red;"><?php echo form_error($new_password['name']); ?>
 					<?php echo isset($errors[$new_password['name']])?$errors[$new_password['name']]:'*'; ?>
 				</td>
 			</tr>
 			<tr>
-				<td><?php echo form_label('È·ÈÏÐÂÃÜÂë', $confirm_new_password['id']); ?>
+				<td><?php echo form_label('ç¡®è®¤æ–°å¯†ç ', $confirm_new_password['id']); ?>
 				</td>
 				<td><?php echo form_password($confirm_new_password); ?></td>
 				<td style="color: red;"><?php echo form_error($confirm_new_password['name']); ?>
@@ -47,7 +47,7 @@
 			</tr>
 			<tr>
 				<td></td>
-				<td><?php echo form_submit('change', 'ÐÞ¸ÄÃÜÂë'); ?></td>
+				<td><?php echo form_submit('change', 'ä¿®æ”¹å¯†ç '); ?></td>
 				<td></td>
 			</tr>
 		</table>

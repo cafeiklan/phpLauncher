@@ -546,7 +546,7 @@ class CI_Profiler {
 			$output .= '<p style="border:1px solid #5a0099;padding:10px;margin:20px 0;background-color:#eee">'.$this->CI->lang->line('profiler_no_profiles').'</p>';
 		}
 
-		$output .= '</div>';		
+		$output .= '</div>';
 
 		return $output;
 	}
