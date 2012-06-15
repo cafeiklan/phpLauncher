@@ -1,3 +1,5 @@
+![phpLauncher - Codeigniter with Bootstrap and other good things](https://github.com/jiji262/phpLauncher/raw/master/logo.jpg)
+
 # Change Logs
 
 ## 2012-06-15
