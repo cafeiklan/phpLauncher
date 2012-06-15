@@ -12,7 +12,7 @@
 $config['assets']['env']        = 'production'; // Environment (if it's set to 'dev', no processing will be done)
 $config['assets']['combine']    = false;
 $config['assets']['minify_js']  = false;
-$config['assets']['minify_css'] = true;
+$config['assets']['minify_css'] = false;
 $config['assets']['less_css']   = false;
 
 /*
@@ -38,7 +38,7 @@ $config['assets']['auto_clear_js_cache']  = true;
 |
 */
 
-$config['assets']['assets_dir'] = '';
+//$config['assets']['assets_dir'] = ''; //will not be used after the theme is enabled --allen
 $config['assets']['js_dir']     = 'js';
 $config['assets']['css_dir']    = 'css';
 $config['assets']['cache_dir']  = 'cache';

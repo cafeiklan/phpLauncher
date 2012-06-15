@@ -1,11 +1,19 @@
-Change Logs
+# Change Logs
 
-2012-05-31
-替换掉系统的Session类，使用hex在论坛提供的版本
+## 2012-06-15
+Added MY_Log library which supports subdirectories and custom catalogs to overwrite CI's LOG.
+Added Theme system to support multiple themes. (sparks/assets was changed to support this)
+Added "bluesky" theme.
 
 
-2012-03-30
+## 2012-05-31
+Replace the orignal Session library with Hex's version.
+
+
+## 2012-03-30
 Version 1.0 released - 20120330
+
+# The libraries and tools used in this release:
 
 TankAuth & TwitterBootStrap:
 https://github.com/ThingOne/CI-Bootstrap
@@ -50,7 +58,7 @@ https://github.com/javiervd/Zebra-Pagination-for-Twitter-Bootstrap
 HMVC:
 https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc/wiki/Home
 
-Not used:
+# The following is good tools but not be used in this project till now:
 
 https://github.com/addyosmani/jquery-ui-bootstrap
 http://getsparks.org/packages/formgenlib/versions/HEAD/show

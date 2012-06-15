@@ -12,18 +12,16 @@
     <![endif]-->
 
 <!-- Styles -->
-<?php display_css(array('bootstrap.css',  'bootstrap-responsive.css', 'jquery.reject.css', 'style.css')); ?>
+<?php display_css('bootstrap.css'); ?>
 <?php 
 if ($this->config->item('use_browser_reject')) {
-	display_css(array('jquery.reject.css'));
+	display_css('jquery.reject.css');
+}
+if ($this->config->item('bootstrap_responsive')) {
+	display_css('bootstrap-responsive.css');
 }
 ?>
-<style type="text/css">
-body {
-	padding-top: 60px;
-	padding-bottom: 40px;
-}
-</style>
+<?php display_css('style.css'); ?>
 <script type="text/javascript">
 var WEB_ROOT = "<?php echo site_url();?>";
 </script>
@@ -98,10 +96,10 @@ var WEB_ROOT = "<?php echo site_url();?>";
 		</footer>
 
 	</div>
-	<?php display_js(array('jquery-1.7.1.min.js', 'bootstrap.min.js','jquery.reject.js' , 'index.js')); ?>
+	<?php display_js(array('jquery-1.7.1.min.js', 'bootstrap.min.js', 'index.js')); ?>
 	<?php 
 	if ($this->config->item('use_browser_reject')) {
-		display_js(array('jquery.reject.js'));
+		display_js('jquery.reject.js');
 	?>
 	<script type="text/javascript">
 	$(function(){

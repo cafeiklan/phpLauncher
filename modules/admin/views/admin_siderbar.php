@@ -1,5 +1,5 @@
 	<div class="span2">
-		<div style="padding: 8px 0pt;" class="well">
+		<div style="padding: 8px 0pt;" class="left-nav">
 			<ul class="nav nav-list">
 				<li class="nav-header">用户管理</li>
 

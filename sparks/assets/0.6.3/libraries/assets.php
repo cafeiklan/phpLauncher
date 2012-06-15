@@ -611,6 +611,14 @@ class Assets {
 			}
 		}
 		
+		//If the theme has been set in application/config.php, the assert_dir will be set
+		// to the theme directory
+		if ($theme = config_item('theme')) {
+			$this->assets_dir = "theme/" . $theme;
+		} else {
+			$this->assets_dir = "theme/default";
+		}		
+		
 		// Prepare all the paths and URI's
 		$this->_paths();
 		
@@ -629,7 +637,7 @@ class Assets {
 		
 		// Now set the assets base URL
 		$this->base_url = reduce_double_slashes(config_item('base_url').'/'.$this->assets_dir);
-		
+
 		// And finally the paths and URL's to the css and js assets
 		$this->js_path 		= reduce_double_slashes($this->base_path .'/'.$this->js_dir);
 		$this->js_url 		= reduce_double_slashes($this->base_url  .'/'.$this->js_dir);

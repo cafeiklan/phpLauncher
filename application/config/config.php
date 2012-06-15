@@ -394,6 +394,20 @@ $config['enable_firephp'] = true;
 $config['use_browser_reject'] = false;
 /*
 |--------------------------------------------------------------------------
+| Config enable bootstrap-responsive or not
+|--------------------------------------------------------------------------
+*/
+$config['bootstrap_responsive'] = false;
+
+/*
+|--------------------------------------------------------------------------
+| Theme to set where to find css js etc.
+|--------------------------------------------------------------------------
+*/
+$config['theme'] = "bluesky";
+
+/*
+|--------------------------------------------------------------------------
 | Website details
 |
 | These details are displayed on header and footer.

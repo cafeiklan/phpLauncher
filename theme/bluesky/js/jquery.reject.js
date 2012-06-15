@@ -38,23 +38,23 @@ $.reject = function(opts) {
 		display: [], // What browsers to display and their order (default set below)
 		browserInfo: { // Settings for which browsers to display
 			firefox: {
-				text: 'Firefox 10', // Text below the icon
+				text: 'Firefox', // Text below the icon
 				url: 'http://www.mozilla.com/firefox/' // URL For icon/text link
 			},
 			safari: {
-				text: 'Safari 5',
+				text: 'Safari',
 				url: 'http://www.apple.com/safari/download/'
 			},
 			opera: {
-				text: 'Opera 11',
+				text: 'Opera',
 				url: 'http://www.opera.com/download/'
 			},
 			chrome: {
-				text: 'Chrome 19',
+				text: 'Chrome',
 				url: 'http://www.google.com/chrome/'
 			},
 			msie: {
-				text: 'Internet Explorer 9',
+				text: 'Internet Explorer',
 				url: 'http://www.microsoft.com/windows/Internet-explorer/'
 			},
 			gcf: {
