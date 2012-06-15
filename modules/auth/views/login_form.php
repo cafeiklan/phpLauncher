@@ -34,7 +34,7 @@
 				'maxlength'	=> 8,
 		);
 		?>
-		<?php echo form_open($this->uri->uri_string()); ?>
+		<?php echo form_open(site_url("/auth/login?redirect=".$redirect)); ?>
 		<table class="table loginform">
 			<tr>
 				<td><?php echo form_label($login_label, $login['id']); ?></td>

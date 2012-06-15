@@ -18,6 +18,8 @@
 
 > Moved the language files to application folder and change the config language to ZH-CN
 
+> Redirect to the orignal link after login
+
 ## 2012-05-31
 
 > Replace the orignal Session library with Hex's version.

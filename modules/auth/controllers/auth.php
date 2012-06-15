@@ -66,6 +66,8 @@ class Auth extends MX_Controller
 					$this->form_validation->set_rules('captcha', 'Confirmation Code', 'trim|xss_clean|required|callback__check_captcha');
 			}
 			$data['errors'] = array();
+			/*判断是否有redirect信息*/
+			$data['redirect'] = isset($_GET['redirect']) ? $_GET['redirect'] : '/';
 
 			if ($this->form_validation->run()) {								// validation ok
 				if ($this->tank_auth->login(
@@ -74,7 +76,7 @@ class Auth extends MX_Controller
 						$this->form_validation->set_value('remember'),
 						$data['login_by_username'],
 						$data['login_by_email'])) {								// success
-					redirect('');
+					redirect($data['redirect']);
 
 				} else {
 					$errors = $this->tank_auth->get_error_message();
