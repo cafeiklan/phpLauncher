@@ -1,4 +1,81 @@
 <?php
+/***
+ * strlen_UTF8($str)
+ * @param str 字符串
+ * 计算UTF8字符串长度
+ * 将汉字计算为1单位长度，英文一个字母1单位长度
+ */
+if ( ! function_exists('strlen_UTF8'))
+{
+	function strlen_UTF8($str)
+	{
+		$len = strlen($str);
+		$n = 0;
+		for($i = 0; $i < $len; $i++) {
+			$x = substr($str, $i, 1);
+			$a  = base_convert(ord($x), 10, 2);
+			$a = substr('00000000'.$a, -8);
+			if (substr($a, 0, 1) == 0) {
+			}elseif (substr($a, 0, 3) == 110) {
+				$i += 1;
+			}elseif (substr($a, 0, 4) == 1110) {
+				$i += 2;
+			}
+			$n++;
+		}
+		return $n;
+	} // End strlen_UTF8;
+}
+
+/***
+ * subString_UTF8($str, $start, $lenth)
+ * @param str 字符串
+ * @param start 起始字符位置
+ * @param length 截取长度
+ * 无乱码截断中文UTF8字符串
+ * 将汉字计算为1单位长度，英文一个字母1单位长度，所以截断时需要注意长度设置。
+ */
+if ( ! function_exists('subString_UTF8'))
+{
+	function subString_UTF8($str, $start, $lenth)
+	{
+		$len = strlen($str);
+		$r = array();
+		$n = 0;
+		$m = 0;
+		for($i = 0; $i < $len; $i++) {
+			$x = substr($str, $i, 1);
+			$a  = base_convert(ord($x), 10, 2);
+			$a = substr('00000000'.$a, -8);
+			if ($n < $start){
+				if (substr($a, 0, 1) == 0) {
+				}elseif (substr($a, 0, 3) == 110) {
+					$i += 1;
+				}elseif (substr($a, 0, 4) == 1110) {
+					$i += 2;
+				}
+				$n++;
+			}else{
+				if (substr($a, 0, 1) == 0) {
+					$r[ ] = substr($str, $i, 1);
+				}elseif (substr($a, 0, 3) == 110) {
+					$r[ ] = substr($str, $i, 2);
+					$i += 1;
+				}elseif (substr($a, 0, 4) == 1110) {
+					$r[ ] = substr($str, $i, 3);
+					$i += 2;
+				}else{
+					$r[ ] = '';
+				}
+				if (++$m >= $lenth){
+					break;
+				}
+			}
+		}
+		return join($r);
+	} // End subString_UTF8;
+}
+
 /**
  * utf-8 字符串截取函数 edit by zwwooooo
  * $sourcestr：要截取的字符串，默认空
@@ -40,6 +117,30 @@ if ( ! function_exists('mySubstr'))
 		}
 		if($i<$str_length)$returnstr.=$endstr;
 		return $returnstr;
+	}
+}
+
+/***
+ * get_client_ip
+ * 获得用户客户端真实IP地址，考虑了IP的欺骗,和多重代理的情况
+ */
+
+if ( ! function_exists('get_client_ip'))
+{
+	function get_client_ip() {
+		$unknown = 'unknown';
+		if ( isset($_SERVER['HTTP_X_FORWARDED_FOR']) && $_SERVER['HTTP_X_FORWARDED_FOR'] && strcasecmp($_SERVER['HTTP_X_FORWARDED_FOR'], $unknown) ) {
+			$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+		} elseif ( isset($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] && strcasecmp($_SERVER['REMOTE_ADDR'], $unknown) ) {
+			$ip = $_SERVER['REMOTE_ADDR'];
+		}
+		/*
+		 处理多层代理的情况
+		或者使用正则方式：$ip = preg_match("/[\d\.]{7,15}/", $ip, $matches) ? $matches[0] : $unknown;
+		*/
+		if (false !== strpos($ip, ','))
+			$ip = reset(explode(',', $ip));
+		return $ip;
 	}
 }
 ?>

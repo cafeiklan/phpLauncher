@@ -204,6 +204,22 @@ class MY_Model extends CI_Model {
 	}
 
 	/**
+	 * Get a field value with matching WHERE parameters
+	 *
+	 * @param string $field_name
+	 * @param array $where_array
+	 * @return string
+	 */
+	public function get_field($field_name, $where_array) {
+		$this->_database()->where($where_array);
+	
+		$this->_callbacks('before_get', array($where_array));
+		$row = $this->_database()->get($this->_table())->row_array();
+		$row = $this->_callbacks('after_get', array($row));
+		return isset($row[$field_name]) ? $row[$field_name] : '';
+	}	
+
+	/**
 	 * Get all records from the database
 	 *
 	 * @return array
