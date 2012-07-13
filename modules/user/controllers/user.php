@@ -29,7 +29,6 @@ class User extends MY_Controller {
 		$data['email']		= $this->tank_auth->get_email();
 		
 		$this->load->helper('gravatar_helper');
-		
 		$this->template->write("header", "<h1>用户首页</h1>");
 		$this->template->write_view("content", "user/profile", $data);
 		$this->template->render();

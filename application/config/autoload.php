@@ -54,7 +54,7 @@ $autoload['packages'] = array(APPPATH.'third_party');
 
 $autoload['libraries'] = array('log', 'firephp', 'auth/tank_auth', 'database', 'session', 'template', 'zebra_pagination', 'form_validation');
 
-$autoload['sparks'] = array('assets/0.6.3', 'messages/1.0.2', 'Debug-Toolbar/1.0.7');
+$autoload['sparks'] = array('assets/0.6.3', 'messages/1.0.3');
 /*
  | -------------------------------------------------------------------
 |  Auto-load Helper Files

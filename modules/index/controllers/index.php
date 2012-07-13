@@ -8,7 +8,7 @@ class Index extends MY_Controller {
 	}
 
 	public function index()
-	{
+	{		
 		//echo modules::run("auth/tank_auth/is_logged_in");exit;
 		if ($this->tank_auth->is_logged_in()) {
 			$role = $this->tank_auth->get_role();
@@ -16,18 +16,8 @@ class Index extends MY_Controller {
 			redirect('/' . $role . '/index');
 		} else {
 			redirect('/auth/login/');
-		}	
-	}
+		}		
 
-	//use fire logs
-	function logs(){
-		/*
-		 highly advised that you use authentification
-		before running this controller to keep the world out of your logs!!!
-		you can use whatever method you like does not have to be logs
-		*/
-		$this->load->spark( 'fire_log/0.8.2');
-		// thats it, ill take if from there
 	}
 
 	//use table_torch
@@ -46,7 +36,7 @@ class Index extends MY_Controller {
 		// keep on rendering page if false ( default )
 		trace( $_SERVER, FALSE );
 		// exit php and rendering if true
-		trace( $_SERVER, TRUE );
+		//trace( $_SERVER, TRUE );
 	}
 	//use messages
 	function message(){
@@ -72,11 +62,5 @@ class Index extends MY_Controller {
 		$this->assets->clear_cache();
 
 	}
-	
-	function debug(){
-		//clean the asserts generated files
-		$this->debugbar($_ENV);
-		$this->load->view("index");
-	}	
 
 }
