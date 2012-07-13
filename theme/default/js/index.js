@@ -4,8 +4,9 @@ $(function(){
     var url = document.URL;//取得当前页的URL
     $(".nav-list li").removeClass("active");
 	$(".nav-list li").each(function(){
-		href = $(this).children("a").attr("href");
-		if(href && new RegExp(href).test(url.toLowerCase())){
+		var href = $(this).children("a").attr("href");
+		var reg = new RegExp(href, "i");
+		if(href && reg.test(url)){
 			$(this).addClass("active");
 			$(this).children("a").children("i").addClass("icon-white");
 		}
