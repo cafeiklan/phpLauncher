@@ -50,6 +50,8 @@
 * @property Users $users
 * @property Tank_auth $tank_auth
 * @property FirePHP $firephp
+* @property Messages $messages
+* 
 *
 *
 * @property Your_lib $your_lib
