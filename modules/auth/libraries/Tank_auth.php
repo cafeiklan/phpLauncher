@@ -414,7 +414,7 @@ class Tank_auth
 						$this->ci->config->item('forgot_password_expire', 'tank_auth'))) {	// success
 
 					// Clear all user's autologins
-					$this->ci->load->model('tank_auth/user_autologin');
+					$this->ci->load->model('auth/tank_auth/user_autologin');
 					$this->ci->user_autologin->clear($user->id);
 
 					return array(
@@ -579,7 +579,7 @@ class Tank_auth
 		$this->ci->load->helper('cookie');
 		$key = substr(md5(uniqid(rand().get_cookie($this->ci->config->item('sess_cookie_name')))), 0, 16);
 
-		$this->ci->load->model('tank_auth/user_autologin');
+		$this->ci->load->model('auth/tank_auth/user_autologin');
 		$this->ci->user_autologin->purge($user_id);
 
 		if ($this->ci->user_autologin->set($user_id, md5($key))) {
@@ -605,7 +605,7 @@ class Tank_auth
 
 			$data = unserialize($cookie);
 
-			$this->ci->load->model('tank_auth/user_autologin');
+			$this->ci->load->model('auth/tank_auth/user_autologin');
 			$this->ci->user_autologin->delete($data['user_id'], md5($data['key']));
 
 			delete_cookie($this->ci->config->item('autologin_cookie_name', 'tank_auth'));
@@ -628,7 +628,7 @@ class Tank_auth
 
 				if (isset($data['key']) AND isset($data['user_id'])) {
 
-					$this->ci->load->model('tank_auth/user_autologin');
+					$this->ci->load->model('auth/tank_auth/user_autologin');
 					if (!is_null($user = $this->ci->user_autologin->get($data['user_id'], md5($data['key'])))) {
 
 						// Login user
