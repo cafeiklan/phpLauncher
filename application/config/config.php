@@ -383,16 +383,7 @@ $config['proxy_ips'] = '';
 */
 $config['enable_firephp'] = true;
 
-/*
-|--------------------------------------------------------------------------
-| Config enable jreject or not
-| http://jreject.turnwheel.com/
-|  jReject provides a simple, robjust, light-weight way to display rejections 
-|  based on a the browser, specific browser version, specific platforms,
-|  or rendering engine. 
-|--------------------------------------------------------------------------
-*/
-$config['use_browser_reject'] = false;
+
 /*
 |--------------------------------------------------------------------------
 | Config enable bootstrap-responsive or not

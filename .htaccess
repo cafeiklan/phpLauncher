@@ -1,3 +1,3 @@
 RewriteEngine on    
-RewriteCond $1 !^(index\.php|images|robots\.txt|theme)    
+RewriteCond $1 !^(index\.php|images|robots\.txt|theme|plugins)    
 RewriteRule ^(.*)$ /phpLauncher/index.php/$1 [L]  

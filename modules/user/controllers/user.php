@@ -1,9 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class User extends MY_Controller {
-
-	private $predown = 0;
-	private $prepush = 0;
 	function __construct()
 	{
 		parent::__construct();
@@ -33,7 +30,6 @@ class User extends MY_Controller {
 		$this->template->write_view("content", "user/profile", $data);
 		$this->template->render();
 	}
-
 
 	public function profile()
 	{

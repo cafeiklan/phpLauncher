@@ -62,3 +62,20 @@ table .orange{color:#f89406;border-bottom-color:#f89406;}
 table .headerSortUp.orange,table .headerSortDown.orange{background-color:#fee9cc;}
 table .purple{color:#7a43b6;border-bottom-color:#7a43b6;}
 table .headerSortUp.purple,table .headerSortDown.purple{background-color:#e2d5f0;}
+
+
+
+
+label.valid {
+  width: 24px;
+  height: 24px;
+  background: url(assets/img/valid.png) center center no-repeat;
+  display: inline-block;
+  text-indent: -9999px;
+}
+label.error {
+  font-weight: bold;
+  color: red;
+  padding: 2px 8px;
+  margin-top: 2px;
+}
