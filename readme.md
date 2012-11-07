@@ -4,6 +4,10 @@
 
 # Change Logs
 
+## 2012-11-07
+> 更新表单验证插件
+> 更新上传插件
+
 ## 2012-07-13
 > remove some sparks
 > change the IDE autocomplete method
