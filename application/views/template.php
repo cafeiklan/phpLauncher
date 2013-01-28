@@ -12,13 +12,13 @@
     <![endif]-->
 
 <!-- Styles -->
-<?php display_css('bootstrap.css'); ?>
 <?php 
 if ($this->config->item('bootstrap_responsive')) {
-	display_css('bootstrap-responsive.css');
+	display_css('bootstrap.css','bootstrap-responsive.css', 'style.css');
+} else {
+	display_css('bootstrap.css', 'style.css');
 }
 ?>
-<?php display_css('style.css'); ?>
 <script type="text/javascript">
 var WEB_ROOT = "<?php echo site_url();?>";
 </script>

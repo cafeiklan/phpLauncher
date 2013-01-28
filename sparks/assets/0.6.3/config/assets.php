@@ -10,7 +10,7 @@
 */
 
 $config['assets']['env']        = 'production'; // Environment (if it's set to 'dev', no processing will be done)
-$config['assets']['combine']    = false;
+$config['assets']['combine']    = true;
 $config['assets']['minify_js']  = false;
 $config['assets']['minify_css'] = false;
 $config['assets']['less_css']   = false;
