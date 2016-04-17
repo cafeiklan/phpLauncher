@@ -2,6 +2,9 @@
 
   [1]: https://github.com/RyanDavis/CI-Bootstrap
 
+## [deprecated] If you are still using Codeigniter, you can refer to new codeigniter boilerplate:
+[codeigniter_boilerplate](https://github.com/jiji262/codeigniter_boilerplate)
+
 # Change Logs
 
 ## 2012-11-07
